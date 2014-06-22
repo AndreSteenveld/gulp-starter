@@ -81,7 +81,12 @@ gulp.task('bootstrap:commit', ['bootstrap:orphan'], function(){
 });
 
 gulp.task('bootstrap', ['bootstrap:master'], function(){      
+  var remote = argv.remote;
      
+  if(remote){
+    gutil.log('Setting origin : ' + remote);
+    git.addRemote('origin', remote);     
+  }
 });
 
 // Styles

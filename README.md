@@ -69,6 +69,15 @@ gulp build --no-cache
 
 You can find some useful options in the `gulpfile.js` file.
 
+#### Removing
+
+When using gulp-starter on an windows machine removing the `./node_modules` directory can be a little difficult because it contains deeply nested directory structure. Using `del` on a dos command line or `rm` in the git bash shell will show the error `<full path>: File or path name to long`. For legacy reasons file and path names can't be longer than 255 characters on windows.
+
+##### So how do you remove it?
+
+ - This thread contains some useful suggestions: http://superuser.com/questions/45697/how-to-delete-a-file-in-windows-with-a-too-long-filename
+ - Using cygwin you can `rm` it.
+
 ### License
 
 #### The MIT License (MIT)
